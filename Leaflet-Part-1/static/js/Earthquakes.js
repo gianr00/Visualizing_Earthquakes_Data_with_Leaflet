@@ -2,8 +2,6 @@
 // Create the Earthquake Visualization
 // © 2022 Rosie Gianan
 //====================================================================================================
-
-
 // Creating the map object
 var myMap = L.map("map", {
   center: [40.036217, -75.513809],
@@ -39,8 +37,6 @@ function createMapFeatures(earthquakeData) {
   onEachFeature: function (feature, layer) {
       layer.bindPopup("<h1>" + feature.properties.place + "</h1> <hr> <h2>" + feature.properties.mag + "</h2>");
   }).addTo(myMap);
-
-  
 
   //----------------------------------------------------------------------------------------------------
   function getMarkerColor(depth) {
