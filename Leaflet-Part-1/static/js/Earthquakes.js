@@ -60,6 +60,15 @@ function createMapFeatures(earthquakeData) {
     }
   };
  
+      // Set up the legend.
+      let legend = L.control({ position: "bottomright" });
+      legend.onAdd = function (myMap) {
+        let div = L.DomUtil.create("div", "info legend"),
+          depths = [-10, 10, 30, 50, 70, 90],
+         
+         
+        labels = [];
+          
       var legendInfo = "<h7>Depths</h7><br>";
       div.innerHTML = legendInfo;
   
@@ -71,7 +80,7 @@ function createMapFeatures(earthquakeData) {
       labels.push('<li style="background: #fc4e2a"<span>70-90</span></li>');
       labels.push('<li style="background: #e31a1c"<span>90+</span></li>')
 
-  
+          div.innerHTML += "<ul>" + labels.join("") + "</ul>";
      return div;
      
      // Adding the legend to the map
