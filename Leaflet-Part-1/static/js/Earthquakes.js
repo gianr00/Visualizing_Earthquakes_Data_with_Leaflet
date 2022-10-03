@@ -3,19 +3,17 @@
 // © 2022 Rosie Gianan
 //====================================================================================================
 
-//===================================
-//? Malvern PA: center: center: [40.036217, -75.513809]
+
 // Creating the map object
 var myMap = L.map("map", {
   center: [40.036217, -75.513809],
   zoom: 4
 });
-//???-----
+
 // Adding the tile layer
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(myMap);
-//??-----
 
 // Load the GeoJSON data.
 var geoEarthquakeDataURL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
@@ -35,7 +33,7 @@ function createMapFeatures(earthquakeData) {
   // create layer group for earthquake data
   //----------------------------------------------------------------------------------------------------
   L.geoJson(earthquakeData, {
-    pointToLayer: pointToLayer: function(layer, latlng) {
+    pointToLayer: function(layer, latlng) {
         return L.circleMarker(latlng);
       },
   onEachFeature: function (feature, layer) {
@@ -61,7 +59,26 @@ function createMapFeatures(earthquakeData) {
         return "#e31a1c";
     }
   };
+ 
+      var legendInfo = "<h7>Depths</h7><br>";
+      div.innerHTML = legendInfo;
+  
+    
+      labels.push('<li style="background: #ffffb2"<span>-10-10</span></li>');
+      labels.push('<li style="background: #fed976"<span>10-30</span></li>');
+      labels.push('<li style="background: #feb24c"<span>30-50</span></li>');
+      labels.push('<li style="background: #fd8d3c"<span>50-70</span></li>');
+      labels.push('<li style="background: #fc4e2a"<span>70-90</span></li>');
+      labels.push('<li style="background: #e31a1c"<span>90+</span></li>')
 
+  
+     return div;
+     
+     // Adding the legend to the map
+     legend.addTo(myMap);
+     // end of legend
+   };
+};
 
 };
             });
