@@ -80,15 +80,14 @@ function createMapFeatures(earthquakeData) {
       labels.push('<li style="background: #fc4e2a"<span>70-90</span></li>');
       labels.push('<li style="background: #e31a1c"<span>90+</span></li>')
 
-          div.innerHTML += "<ul>" + labels.join("") + "</ul>";
+     div.innerHTML += "<ul>" + labels.join("") + "</ul>";
      return div;
      
      // Adding the legend to the map
      legend.addTo(myMap);
      // end of legend
    };
-};
 
 };
-            });
+});
 // © 2022 Rosie Gianan ===============================================================================
