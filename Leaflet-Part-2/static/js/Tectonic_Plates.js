@@ -3,8 +3,7 @@
 // © 2022 Rosie Gianan
 //====================================================================================================
 
-
-
+console.log("tectonic_plates in progress");
 // // create the Base Layer with a satellite background
 //? to do: temp url is used
 var earthquakesMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -115,7 +114,34 @@ function createMapFeatures(earthquakeData) {
                     return "#e31a1c";
             }
         };
+        // Set up the legend.
+        let legend = L.control({ position: "bottomright" });
+        legend.onAdd = function (myMap) {
+          let div = L.DomUtil.create("div", "info legend"),
+            depths = [-10, 10, 30, 50, 70, 90],
+            colors = ["#d9f0a3", "#addd8e", "#78c679", "#41ab5d", "#238443", "#005a32"],
+           
+          labels = [];
+            
+        var legendInfo = "<h7>Depths</h7><br>";
+        div.innerHTML = legendInfo;
+    
+      
+        labels.push('<li style="background: #ffffb2"<span>-10-10</span></li>');
+        labels.push('<li style="background: #fed976"<span>10-30</span></li>');
+        labels.push('<li style="background: #feb24c"<span>30-50</span></li>');
+        labels.push('<li style="background: #fd8d3c"<span>50-70</span></li>');
+        labels.push('<li style="background: #fc4e2a"<span>70-90</span></li>');
+        labels.push('<li style="background: #e31a1c"<span>90+</span></li>')
+
+            div.innerHTML += "<ul>" + labels.join("") + "</ul>";
+       return div;
+       
+       // Adding the legend to the map
+       legend.addTo(myMap);
+       // end of legend
         
+    });
 
 
 };

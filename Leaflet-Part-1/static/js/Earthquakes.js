@@ -2,6 +2,7 @@
 // Create the Earthquake Visualization
 // © 2022 Rosie Gianan
 //====================================================================================================
+console.log("earthquakes in progress");
 // Creating the map object
 var myMap = L.map("map", {
   center: [40.036217, -75.513809],
