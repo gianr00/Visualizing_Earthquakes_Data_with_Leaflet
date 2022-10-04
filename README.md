@@ -12,10 +12,4 @@ The United States Geological Survey, or USGS for short, is responsible for provi
 This project builds a dashboard that visualizes the collected earthquakes and tectonic plates data and display them in a meaningful way. 
 
 
-### Earthquakes map:
-
-![Image](Images/Earthquakes.png)
-
-### Tectonic_Plates:
-
-![Image](Images/Tectonic_Plates.png)
+### Earthquakes map: ![Image](Images/Earthquakes.png)  ### Tectonic_Plates: ![Image](Images/Tectonic_Plates.png)
