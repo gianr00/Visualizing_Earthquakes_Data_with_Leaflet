@@ -33,14 +33,9 @@ var tectonicPlatesDataURL = "https://raw.githubusercontent.com/fraxen/tectonicpl
 
 // Getting our GeoJSON data 
 d3.json(geoEarthquakeDataURL).then(function (data) {
-  // console.log("data:", data);
-  // console.log("data.features:", data.features);
   let earthquakeData = data.features;
 
   d3.json(tectonicPlatesDataURL).then(function (data2) {
-    // console.log("data2:", data2);
-    // console.log("data2.features:", data2.features);
-
     let tectonicPlatesData = data2.features;
 
     //call function createMapFeatures passing the earthquakeData and tectonicPlatesData
@@ -52,8 +47,6 @@ d3.json(geoEarthquakeDataURL).then(function (data) {
 // createMapFeatures() - create the map features using the earthquakeData
 //----------------------------------------------------------------------------------------------------
 function createMapFeatures(earthquakeData, tectonicPlatesData) {
-  // console.log("createMapFeatures earthquakeData:", earthquakeData);
-  // console.log("createMapFeatures tectonicPlatesData:", tectonicPlatesData);
 
   //--------------------------------------------------------------------------------------------------
   // set_pointToLayer_attributes() - set the attributes for each layer 
@@ -98,7 +91,6 @@ function createMapFeatures(earthquakeData, tectonicPlatesData) {
   // set_onEachFeature_attributes() - set the attributes for each feature
   //--------------------------------------------------------------------------------------------------
   function set_onEachFeature_attributes(feature, layer) {
-    // console.log("set_onEachFeature_attributes feature.properties.mag: ", feature.properties.mag)
     // Giving each feature a popup with information that's relevant to it
     layer.bindPopup("<p>Magnitude: " + feature.properties.mag + "<br>" +
       "Location : " + feature.properties.place + "<br>" +
@@ -120,7 +112,6 @@ function createMapFeatures(earthquakeData, tectonicPlatesData) {
   //----------------------------------------------------------------------------------------------------
   // create layer group for tectonicPlatesData
   //----------------------------------------------------------------------------------------------------
-  // console.log("tectonicPlatesData:", tectonicPlatesData);
   L.geoJson(tectonicPlatesData, {
     fillOpacity: 0,
     color: "red"

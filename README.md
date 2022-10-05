@@ -17,5 +17,5 @@ Create a dashboard that allows the user to select the data to be analyzed; (1) e
 1.    Map that plots the visualization results of the earthquakes data. 
 2.    Map that plots the visualization results of the earthquakes and tectonic plates data. 
 
-### Earthquakes map: <img src="Images/Earthquakes.png" width="200"> 
-### Tectonic_Plates: <img src="Images/Earthquakes.png" width="200">
+### Earthquakes map: <img src="Images/Earthquakes.png" width="500"> 
+### Tectonic_Plates: <img src="Images/Tectonic_Plates.png" width="500">

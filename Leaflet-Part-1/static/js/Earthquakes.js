@@ -20,8 +20,6 @@ var geoEarthquakeDataURL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/su
 
 // Getting our GeoJSON data 
 d3.json(geoEarthquakeDataURL).then(function (data) {
-  // console.log("data:", data);
-  // console.log("data.features:", data.features);
 
   let earthquakeData = data.features;
 
@@ -33,7 +31,6 @@ d3.json(geoEarthquakeDataURL).then(function (data) {
 // createMapFeatures() - create the map features using the earthquakeData
 //----------------------------------------------------------------------------------------------------
 function createMapFeatures(earthquakeData) {
-  // console.log("createMap earthquakeData:", earthquakeData);
 
   //--------------------------------------------------------------------------------------------------
   // create layer group for earthquake data
