@@ -2,7 +2,7 @@
 
 Author: Rosie Gianan, gianr00@gmail.com
 
-Build With: JavaScript with D3.js, HTML, CSS and leaflet  
+Build With: JavaScript with D3.js, HTML, CSS and Leaflet  
 
 ## Goals:
 The United States Geological Survey, or USGS for short, is responsible for providing scientific data about natural hazards, the health of our ecosystems and environment, and the impacts of climate and land-use change. Their scientists develop new methods and tools to supply timely, relevant, and useful information about the Earth and its processes. They collect a massive amount of earthquakes data from all over the world each day. 
