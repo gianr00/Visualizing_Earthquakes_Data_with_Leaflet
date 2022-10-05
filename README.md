@@ -11,6 +11,11 @@ The United States Geological Survey, or USGS for short, is responsible for provi
 
 This project builds a dashboard that visualizes the collected earthquakes and tectonic plates data and display them in a meaningful way. 
 
+## Solutions:
+Create a dashboard that allows the user to select the data to be analyzed; (1) earthquakes data; (2) tectonic plates data. The dashboard displays the following maps based on the selected data:
+
+1.    Map that plots the visualization results of the earthquakes data. 
+2.    Map that plots the visualization results of the earthquakes and tectonic plates data. 
 
 ### Earthquakes map: <img src="Images/Earthquakes.png" width="200"> 
-### Tectonic_Plates: <img src="Images/Earthquakes.png" width="200">)
+### Tectonic_Plates: <img src="Images/Earthquakes.png" width="200">

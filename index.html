@@ -5,23 +5,72 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>USGS Earthquakes Data Visualization, by Rosie Gianan</title>
-
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-    crossorigin="" />
-
-  <!-- Our CSS -->
-  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+  <title>USGS Earthquakes Data Visualization, © 2022 Rosie Gianan</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
-    <h1> main index - in progress</h1>
-    <a href="index.html">Home</a>
- <a href="Leaflet-Part-1/Earthquakes.html">part 1 in progress</a>
- <a href="Leaflet-Part-2/Tectonic_Plates.html">part 2 in progress</a>
-  
+
+  <div class="container">
+    <!-- header -->
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1 style="font-size: 30px; color: #08519c">United States Geological Survey(USGS) Earthquakes Data Visualization
+        </h1>
+        <a style="font-size: 20px; background-color: #9ecae1; color: #08519c" href="index.html">Home</a>
+        <a style="font-size: 20px; background-color: #9ecae1; color: #08519c" href="Leaflet-Part-1/Earthquakes.html"
+          role="button">Earthquakes Map</a>
+        <a style="font-size: 20px; background-color: #9ecae1; color: #08519c" href="Leaflet-Part-2/Tectonic_Plates.html"
+          role="button">Tectonic Plates<br></a>
+        <a style="font-size: 15px; color: #08519c">© 2022 Rosie Gianan</a>
+      </div>
+    </div>
+
+    <!-- details -->
+    <div class="row">
+      <div class="col-md-12">
+        <!-- left side -->
+        <div class="col-md-8 jumbotron">
+          <p>
+            The United States Geological Survey, or USGS for short, is responsible for providing scientific data about
+            natural hazards, the health of our ecosystems and environment, and the impacts of climate and land-use
+            change.
+            Their scientists develop new methods and tools to supply timely, relevant, and useful information about the
+            Earth and its processes.
+          </p>
+          <p>
+            They collect a massive amount of earthquake data from all over the world each day. This tool will allow them
+            to visualize their earthquake data and display it in a meaningful way. This will allow them to better
+            educate
+            the public and other government organizations (and hopefully secure more funding) on issues facing our
+            planet.
+          </p>
+          <p>This tool creates the map with the visualization results of the collected earthquakes and tectonic plates
+            data.</p>
+        </div>
+
+        <!-- right side -->
+        <div class="col col-md-4">
+          <h4>Map with Earthquakes data: </h4>
+          <a href="Leaflet-Part-1/Earthquakes.html">
+            <img src="images/Earthquakes.png" alt="Earthquakes Map" width="280" align="left">
+          </a>
+        </div>
+
+        <br><br><br>
+
+        <div class="col col-md-4">
+          <br><br><br><br><br>
+          <h4>Map with Earthquakes and Tectonic Plates data: </h4>
+          <a href="Leaflet-Part-2/Tectonic_Plates.html">
+            <img src="images/Tectonic_Plates.png" alt="Tectonic Plates" width="280" align="left">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 </body>
 
 </html>
