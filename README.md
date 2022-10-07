@@ -2,6 +2,8 @@
 
 Author: Rosie Gianan, gianr00@gmail.com
 
+Website URL: https://gianr00.github.io/Visualizing_Earthquakes_Data_with_Leaflet/
+
 Build With: JavaScript with D3.js, HTML, CSS and Leaflet  
 
 ## Goals:
