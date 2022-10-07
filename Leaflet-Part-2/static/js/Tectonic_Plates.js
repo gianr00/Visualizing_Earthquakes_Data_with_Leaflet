@@ -4,27 +4,13 @@
 //====================================================================================================
 
 // create the Base Layer with a light background
-var grayScaleMap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
-  attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
-  maxZoom: 18,
-  id: "light-v10",
-  accessToken: API_KEY
-});
-
-// create the Base Layer with an outdoor background
-var outdoorsMap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
-  attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
-  maxZoom: 18,
-  id: "outdoors-v9",
-  accessToken: API_KEY
+var grayScaleMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 });
 
 // create the Base Layer with a satellite background
-var satelliteMap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
-  attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
-  maxZoom: 18,
-  id: "satellite-streets-v9",
-  accessToken: API_KEY
+var satelliteMap = L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", {
+  attribution: '&copy; <a href="https://opentopomap.org">OpenStreetMap</a> contributors'
 });
 
 // Load the GeoJSON data.
@@ -122,10 +108,8 @@ function createMapFeatures(earthquakeData, tectonicPlatesData) {
   //----------------------------------------------------------------------------------------------------
   var baseMaps = {
     "Satellite": satelliteMap,
-    "Gray Scale": grayScaleMap,
-    "Outdoors": outdoorsMap
+    "Gray Scale": grayScaleMap
   };
-
   //----------------------------------------------------------------------------------------------------
   // Creating the map object using satellite and earthquake maps on initial load
   //----------------------------------------------------------------------------------------------------
